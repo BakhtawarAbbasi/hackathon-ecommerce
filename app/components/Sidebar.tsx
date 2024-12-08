@@ -51,7 +51,7 @@ const Sidebar: React.FC<SidebarProps> = ({ setSelectedCategory }) => {
         <li><a href="#" className="block" onClick={() => handleCategoryChange('Accessories & Equipment')}>Accessories & Equipment</a></li>
       </ul>
 
-      <div className="mt-6 border border-gray-300 shadow-sm p-4 rounded">
+      <div className="mt-6 border-y border-gray-300 p-4 ">
         <div className="flex justify-between items-center mb-2">
           <h2 className="font-bold">Gender</h2>
           <button onClick={() => setIsGenderOpen(!isGenderOpen)}>
@@ -82,7 +82,7 @@ const Sidebar: React.FC<SidebarProps> = ({ setSelectedCategory }) => {
         )}
       </div>
 
-      <div className="mt-6 border border-gray-300 shadow-sm p-4 rounded">
+      <div className="mt-6 border-y border-gray-300 p-4 ">
         <div className="flex justify-between items-center mb-2">
           <h2 className="font-bold">Kids</h2>
           <button onClick={() => setIsKidsOpen(!isKidsOpen)}>
@@ -107,7 +107,7 @@ const Sidebar: React.FC<SidebarProps> = ({ setSelectedCategory }) => {
         )}
       </div>
 
-      <div className="mt-6 border border-gray-300 shadow-sm p-4 rounded">
+      <div className="mt-6 border-y border-gray-300 p-4 ">
         <div className="flex justify-between items-center mb-2">
           <h2 className="font-bold">Shop By Price</h2>
           <button onClick={() => setIsPriceOpen(!isPriceOpen)}>

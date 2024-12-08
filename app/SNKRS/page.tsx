@@ -1,8 +1,8 @@
-import About from "../components/Snkrs";
+import Snkrs from "../components/Snkrs";
 
-export default function AboutPage() {
+export default function SnkrPage() {
     return(
-      <><About /></>
+      <><Snkrs /></>
       
     );
   }
