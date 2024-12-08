@@ -7,8 +7,18 @@ interface ProductImageProps {
 }
 
 const ProductImage: React.FC<ProductImageProps> = ({ src, alt }) => {
-  return <Image src={src} alt={alt} width={278.4} height={278.4} className="object-cover w-full h-auto" />;
+  // Return the Image component properly
+  return (
+    <div className="image-container">
+      <Image
+        src={src}
+        alt={alt}
+        width={278.4}
+        height={278.4}
+        className="object-cover w-full h-auto"
+      />
+    </div>
+  );
 };
 
 export default ProductImage;
-``
