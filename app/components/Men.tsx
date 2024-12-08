@@ -35,7 +35,7 @@ const Cart: React.FC = () => {
                   Nike Dri-FIT ADV TechKnit Ultra
                 </h3>
                 <p className="text-[#757575] text-xs md:text-sm">
-                  Men's Short-Sleeve Running Top
+                  Men&apos;s Short-Sleeve Running Top
                 </p>
                 <p className="text-[#757575] text-xs md:text-sm">
                   Ashen Slate/Cobalt Bliss
@@ -77,7 +77,9 @@ const Cart: React.FC = () => {
                 <h3 className="font-semibold text-sm md:text-lg text-[#111111]">
                   Nike Air Max 97 SE
                 </h3>
-                <p className="text-xs md:text-sm text-[#757575]">Men's Shoes</p>
+                <p className="text-xs md:text-sm text-[#757575]">
+                  Men&apos;s Shoes
+                </p>
                 <p className="text-xs md:text-sm text-[#757575]">
                   Flat Pewter/Light Bone/Black/White
                 </p>
@@ -107,7 +109,9 @@ const Cart: React.FC = () => {
 
             {/* Favourite */}
             <div className="w-full mt-4">
-              <p className="text-[16px] text-[#111111] font-semibold">Favourite</p>
+              <p className="text-[16px] text-[#111111] font-semibold">
+                Favourite
+              </p>
               <p className="text-[12px] text-[#111111]">
                 There are no items saved to your favourites.
               </p>
@@ -148,12 +152,11 @@ const Cart: React.FC = () => {
             />
             <div className="mt-4">
               <p>Air Jordan 1 Mid SE Craft</p>
-              <p className="text-[12px] text-[#757575]">Men's Shoes</p>
+              <p className="text-[12px] text-[#757575]">Men&apos;s Shoes</p>
               <p className="text-[12px] text-[#111111]">MRP : ₹12,295.00</p>
             </div>
           </div>
         </div>
-
       </main>
     </div>
   );
