@@ -7,7 +7,7 @@ const SnkNav = () => {
     <div className="w-full h-[28.8px] bg-[#FFFFFF] flex justify-between items-center px-8">
     {/* Left Side (Logo) */}
     <div className="flex items-center text-[#757575] text-sm">
-      <a href='/'><p>Visit Nike.com</p></a>
+      <Link href='/'><p>Visit Nike.com</p></Link>
     </div>
 
     {/* Right Side (Links) */}
