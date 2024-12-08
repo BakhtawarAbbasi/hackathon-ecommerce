@@ -16,8 +16,8 @@ const Snkhead = () => {
                 <Link href="/" className="hover:text-gray-500 hover:underline">
                    Feed
                 </Link>
-                <Link href="/" className="hover:text-gray-500 hover:underline">
-                    in Stock
+                <Link href="/" className="hover:text-gray-500 hover:underline underline">
+                    In Stock
                 </Link>
                 <Link href="/" className="hover:text-gray-500 hover:underline">
                     Upcoming

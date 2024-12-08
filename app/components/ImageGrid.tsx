@@ -25,6 +25,13 @@ const allImages = [
   { src: '/images/sneak16.png', alt: 'Sneaker 12' },
   { src: '/images/sneak17.png', alt: 'Sneaker 12' },
   { src: '/images/sneak18.png', alt: 'Sneaker 12' },
+  { src: '/images/sneak1.png', alt: 'Sneaker 12' },
+  { src: '/images/sneak4.png', alt: 'Sneaker 12' },
+  { src: '/images/sneak19.png', alt: 'Sneaker 12' },
+  { src: '/images/sneak20.png', alt: 'Sneaker 12' },
+  { src: '/images/sneak21.png', alt: 'Sneaker 12' },
+  { src: '/images/sneak5.png', alt: 'Sneaker 12' },
+  { src: '/images/sneak7.png', alt: 'Sneaker 12' },
 ];
 
 const ImageGrid: React.FC = () => {
