@@ -7,7 +7,6 @@ interface ProductImageProps {
 }
 
 const ProductImage: React.FC<ProductImageProps> = ({ src, alt }) => {
-  // Return the Image component properly
   return (
     <div className="image-container">
       <Image

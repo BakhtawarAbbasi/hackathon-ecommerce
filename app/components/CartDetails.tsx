@@ -10,7 +10,8 @@ const CartDetails: React.FC = () => {
       <p className="text-[#757575] text-[12px] mb-6">
         (Also includes all applicable duties)
       </p>
-
+      
+      {/* PRICE BOXES */}
       <h3 className="text-lg font-semibold mb-2">Select Size</h3>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
         {[

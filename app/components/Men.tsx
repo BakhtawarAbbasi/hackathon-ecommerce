@@ -5,6 +5,7 @@ const Cart: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#FFFFFF] flex items-center justify-center py-8 px-4">
       <main className="container mx-auto max-w-6xl bg-[#FFFFFF] p-4 md:p-6 ">
+        
         {/* Free Delivery Banner */}
         <div className="bg-[#F7F7F7] flex flex-col md:flex-row md:items-center lg:pl-8 p-3 md:p-4 mb-6 text-center">
           <p className="text-sm text-gray-700">Free Delivery</p>

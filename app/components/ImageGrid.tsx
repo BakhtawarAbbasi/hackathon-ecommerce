@@ -49,6 +49,8 @@ const ImageGrid: React.FC = () => {
         ))}
       </div>
       {visibleImages.length < allImages.length && (
+
+        // Button
         <div className="flex justify-center mt-8">
           <button 
             onClick={loadMoreImages} 
