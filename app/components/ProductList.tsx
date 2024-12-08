@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import Product from './Product';
 import Sidebar from './Sidebar';
-import Categary from './Categary';
 
 const products = [
   {

@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaFilter } from 'react-icons/fa'; // React icons for filter icon
 import Image from 'next/image';
 const Main = () => {
     return (

@@ -1,7 +1,5 @@
 import type { NextPage } from 'next';
 import CartImage from '../components/CartImage';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import CartDetails from './CartDetails';
 import FullWidthImage from './FullWidthImage';
 import ProductSlider from './ProductSlider';
