@@ -1,7 +1,16 @@
-import Image from "next/image";
+import React from 'react';
+import ProductList from './components/ProductList';
+import Navbar from './components/Navbar';
+import TopNavbar from './components/TopNavbar';
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
-    <div>Home</div>
+    <div>
+      <TopNavbar/>
+      <Navbar/>
+      <ProductList />
+    </div>
   );
-}
+};
+
+export default Home;

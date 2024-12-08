@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-
-
+import TopNavbar from "./components/TopNavbar";
 
 export const metadata: Metadata = {
   title: "E-commerce Hackaton",
@@ -19,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar/>
+        
         {children}
         <Footer/>
       </body>
