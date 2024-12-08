@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Product from './Product';
 import Sidebar from './Sidebar';
+import Categary from './Categary';
 
 const products = [
   {
@@ -267,7 +268,7 @@ const ProductList: React.FC = () => {
     : products.filter((product) => product.category === selectedCategory);
 
   return (
-    <div className="flex flex-col md:flex-row px-4 md:px-8">
+    <><div className="flex flex-col md:flex-row px-4 md:px-8">
       {/* Sidebar */}
       <Sidebar setSelectedCategory={setSelectedCategory} />
 
@@ -285,6 +286,9 @@ const ProductList: React.FC = () => {
       </main>
 
     </div>
+    <div>
+        <Categary />
+      </div></>
   );
 };
 

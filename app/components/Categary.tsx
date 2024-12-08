@@ -1,21 +1,35 @@
-import React from 'react'
+import React from 'react';
 
-const Categary = () => {
+const categories = [
+  'Best Selling Products',
+  'Best Shoes',
+  'New Basketball Shoes',
+  'New Football Shoes',
+  'New Men\'s Shoes',
+  'New Running Shoes',
+  'Best Men\'s Shoes',
+  'New Jordan Shoes',
+  'Best Women\'s Shoes',
+  'Best Training & Gym',
+];
+
+const RelatedCategories: React.FC = () => {
   return (
-    <div className='mt-32 w-[873.6px] h-[207.2px] px-[0px] py-[14203.2px] flex flex-col'>
-      {/* Top */}
-      <div className=''>
-        <h1>Related Categories</h1>
+    <div className="py-8 px-8 lg:ml-64">
+      <h2 className="text-2xl font-bold mb-4 border-t-2 mt-4 pt-8">Related Categories</h2>
+      <div className="flex flex-wrap gap-2 ">
+        {categories.map((category, index) => (
+          <button
+            key={index}
+            className=" text-[#111111] py-2 px-4 rounded-full hover:bg-gray-100 transition border border-[#CCCCCC]"
+          >
+            {category}
+          </button>
+        ))}
       </div>
-
-      {/* Bottom */}
-      <div className='flex w-[873.6px] h-[139.2px] gap-[7px]'>
-        <span className='w-[128.66px] h-[27.8px] py-[6.4] px-[18.4px]'>Best Selling Products</span>
-
-      </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default Categary
+export default RelatedCategories;
+
