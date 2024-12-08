@@ -12,6 +12,7 @@ export default {
   		colors: {	
   			
   		},
+      
       screens: {
          ' xs': '480px',
          ' sm': '640px',

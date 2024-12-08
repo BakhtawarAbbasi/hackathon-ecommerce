@@ -11,7 +11,7 @@ const TopNavbar = () => {
             </div>
 
             {/* Right Side (Links) */}
-            <div className="flex items-center space-x-4 text-sm text-[#111111] ">
+            <div className="flex items-center space-x-4 text-sm text-[#111111]">
                 <Link href="/" className="hover:underline">
                     Find a Store
                 </Link>
