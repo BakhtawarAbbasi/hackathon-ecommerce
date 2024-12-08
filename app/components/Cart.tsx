@@ -34,7 +34,7 @@ const Cart: NextPage = () => {
 
       </div>
       <FullWidthImage src="/bg.png" alt="Nike Air Max 97 SE" topText="Explore the Nike Air Max 97 SE Men's Shoes." bottomText="Originally designed for performance running, the full-length Max Air unit adds soft cushioning." />
-      <FullWidthImage src="/bg2.png" alt="Nike Air Max 97 SE 2" topText="" bottomText="The suede and synthetic leather upper with mesh underlays adds breathability and durability." /> 
+      <FullWidthImage src="/bg2.png" alt="Nike Air Max 97 SE 2" topText="" bottomText="The suede and synthetic leather upper with mesh underlays adds breathability and durability." />
       <FullWidthImage src="/bg-3.png" alt="Nike Air Max 97 SE 3" topText="" bottomText="Hidden lacing system was a first of its kind and delivers a streamlined look." />
       <div className="container mx-auto px-4 py-8"> <ProductSlider /> </div>
     </div>

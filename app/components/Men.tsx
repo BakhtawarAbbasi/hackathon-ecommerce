@@ -136,23 +136,23 @@ const Cart: React.FC = () => {
         </div>
 
         {/* You Might Also Like */}
-<div className="w-full mt-12 lg:pl-0">
-  <p className="text-[16px] m-2">You Might Also Like</p>
-  <div className="flex flex-col ">
-    <Image
-      src="/cart2.png"
-      alt="Air Jordan 1 Mid SE Craft"
-      width={300}
-      height={300}
-      className="object-cover rounded"
-    />
-    <div className="mt-4">
-      <p>Air Jordan 1 Mid SE Craft</p>
-      <p className="text-[12px] text-[#757575]">Men's Shoes</p>
-      <p className="text-[12px] text-[#111111]">MRP : ₹12,295.00</p>
-    </div>
-  </div>
-</div>
+        <div className="w-full mt-12 lg:pl-0">
+          <p className="text-[16px] m-2">You Might Also Like</p>
+          <div className="flex flex-col ">
+            <Image
+              src="/cart2.png"
+              alt="Air Jordan 1 Mid SE Craft"
+              width={300}
+              height={300}
+              className="object-cover rounded"
+            />
+            <div className="mt-4">
+              <p>Air Jordan 1 Mid SE Craft</p>
+              <p className="text-[12px] text-[#757575]">Men's Shoes</p>
+              <p className="text-[12px] text-[#111111]">MRP : ₹12,295.00</p>
+            </div>
+          </div>
+        </div>
 
       </main>
     </div>
