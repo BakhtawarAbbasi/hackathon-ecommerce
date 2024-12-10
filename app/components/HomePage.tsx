@@ -26,7 +26,7 @@ const HomePage = () => {
           <h2 className="text-sm text-[#111111]">First Look</h2>
           <h3 className="text-2xl md:text-4xl font-semibold text-[#111111] mt-2">NIKE AIR MAX PULSE</h3>
           <p className="text-sm md:text-base mt-4 mx-auto max-w-lg">
-            Extreme comfort. Hyper durable. Max volume. Introducing the Air Max Pulse —designed to push you past your limits and help you go to the max.
+            Extreme comfort. Hyper durable. Max volume. Introducing the Air Max Pulse &mdash; designed to push you past your limits and help you go to the max.
           </p>
           <div className="flex flex-wrap justify-center mt-6 gap-4">
             <button className="bg-[#111111] text-white px-4 py-2 rounded-full">Notify Me</button>
@@ -65,9 +65,9 @@ const HomePage = () => {
         <Gearup />
       </div>
 
-      {/* "Don't Miss" Section */}
+      {/* "Don&apos;t Miss" Section */}
       <div>
-        <h1 className="font-bold text-lg md:text-2xl mb-4">Don't Miss</h1>
+        <h1 className="font-bold text-lg md:text-2xl mb-4">Don&apos;t Miss</h1>
         <Image
           src="/back3.png"
           alt="Fight Essentials"
@@ -87,7 +87,7 @@ const HomePage = () => {
 
       {/* Image Grid Section */}
       <div>
-        <h1 className="font-bold text-lg md:text-2xl mb-4">Don't Miss</h1>
+        <h1 className="font-bold text-lg md:text-2xl mb-4">Don&apos;t Miss</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <Image src="/back4.png" alt="" height={400} width={400} className="rounded-lg object-cover" />
           <Image src="/back5.png" alt="" height={400} width={400} className="rounded-lg object-cover" />
@@ -120,17 +120,17 @@ const HomePage = () => {
           <ul className="space-y-2 text-[#757575]">
             <li>All Clothing</li>
             <li>Modest Clothing</li>
-            <li>Hoodies & Pullovers</li>
-            <li>Shirts & Tops</li>
+            <li>Hoodies &amp; Pullovers</li>
+            <li>Shirts &amp; Tops</li>
           </ul>
         </div>
         <div>
           <h1 className="font-bold mb-4">Kids</h1>
           <ul className="space-y-2 text-[#757575]">
-            <li>Infant & Toddler Shoes</li>
-            <li>Kids' Shoes</li>
-            <li>Kids' Jordan Shoes</li>
-            <li>Kids' Basketball Shoes</li>
+            <li>Infant &amp; Toddler Shoes</li>
+            <li>Kids&apos; Shoes</li>
+            <li>Kids&apos; Jordan Shoes</li>
+            <li>Kids&apos; Basketball Shoes</li>
           </ul>
         </div>
       </div>

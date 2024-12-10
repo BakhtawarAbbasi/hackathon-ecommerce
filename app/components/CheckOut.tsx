@@ -42,7 +42,7 @@ const CheckoutPage = () => {
             <p className='mt-3'>Save this address to my profile</p>
           </div>
           <div>
-            <h1 className='font-bold py-6'>What's your contact information?</h1>
+            <h1 className='font-bold py-6'>What your contact information?</h1>
             <input className="mt-4 block h-[56px] border border-[#CCCCCC] p-2 w-full rounded-md shadow-sm" type="text" placeholder='Email'/>
             <p className='text-[#757575] text-[11px] pl-2 mt-1'>A confirmation email will be sent after checkout.</p>
             <input className="mt-4 block h-[56px] border border-[#CCCCCC] p-2 w-full rounded-md shadow-sm" type="text" placeholder='Phone'/>
@@ -51,7 +51,7 @@ const CheckoutPage = () => {
           <div>
             <h1>What's your PAN?</h1>
             <input className="mt-4 block h-[56px] border border-[#CCCCCC] p-2 w-full rounded-md shadow-sm" type="text" placeholder='PAN'/>
-            <p className='text-[#757575] text-[11px] pl-2 mt-1'>Enter your PAN to enable payment with UPI, Net Banking or local card methods.</p>
+            <p className='text-[#757575] text-[11px] pl-2 mt-1'>Enter your PAN to enable payment with UPI Net Banking or local card methods.</p>
           </div>
           <div>
             <input type="checkbox" className="mr-2 my-4" />
