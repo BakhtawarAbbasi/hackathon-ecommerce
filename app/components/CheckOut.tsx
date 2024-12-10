@@ -9,7 +9,7 @@ const CheckoutPage = () => {
         <div>
           <h2 className="text-xl text-[#111111] font-bold mb-2">How would you like to get your order?</h2>
           <p className='text-[#757575] text-[15px]'>
-            Customs regulation for India require a copy of the recipients KYC. The address on the KYC needs to match the shipping address. Our courier will contact you via SMS/email to obtain a copy of your KYC. The KYC will be stored securely and used solely for the purpose of clearing customs (including sharing it with customs officials) for all orders and returns. If your KYC does not match your shipping address, please click the link for more information. 
+            Customs regulation for India require a copy of the recipient&apos;s KYC. The address on the KYC needs to match the shipping address. Our courier will contact you via SMS/email to obtain a copy of your KYC. The KYC will be stored securely and used solely for the purpose of clearing customs (including sharing it with customs officials) for all orders and returns. If your KYC does not match your shipping address, please click the link for more information. 
             <a href="#" className="text-blue-600 ml-1">Learn More</a>
           </p>
         </div>
@@ -42,14 +42,14 @@ const CheckoutPage = () => {
             <p className='mt-3'>Save this address to my profile</p>
           </div>
           <div>
-            <h1 className='font-bold py-6'>What your contact information?</h1>
+            <h1 className='font-bold py-6'>What&apos;s your contact information?</h1>
             <input className="mt-4 block h-[56px] border border-[#CCCCCC] p-2 w-full rounded-md shadow-sm" type="text" placeholder='Email'/>
             <p className='text-[#757575] text-[11px] pl-2 mt-1'>A confirmation email will be sent after checkout.</p>
             <input className="mt-4 block h-[56px] border border-[#CCCCCC] p-2 w-full rounded-md shadow-sm" type="text" placeholder='Phone'/>
             <p className='text-[#757575] text-[11px] pl-2 mt-1'>A carrier might contact you to confirm delivery.</p>
           </div>
           <div>
-            <h1>What's your PAN?</h1>
+            <h1>What&apos;s your PAN?</h1>
             <input className="mt-4 block h-[56px] border border-[#CCCCCC] p-2 w-full rounded-md shadow-sm" type="text" placeholder='PAN'/>
             <p className='text-[#757575] text-[11px] pl-2 mt-1'>Enter your PAN to enable payment with UPI Net Banking or local card methods.</p>
           </div>
@@ -93,18 +93,18 @@ const CheckoutPage = () => {
 
         {/* Images and Text */}
         <div className="flex mt-6">
-          <Image src="/checkout1.png" width={80} height={80} alt="Nike Dri-FIT ADV TechKnit Ultra Men's Short-Sleeve Running Top" className="mr-4"/>
+          <Image src="/checkout1.png" width={80} height={80} alt="Nike Dri-FIT ADV TechKnit Ultra Men&apos;s Short-Sleeve Running Top" className="mr-4"/>
           <div>
-            <p>Nike Dri-FIT ADV TechKnit Ultra Men Short-Sleeve Running Top</p>
+            <p>Nike Dri-FIT ADV TechKnit Ultra Men&apos;s Short-Sleeve Running Top</p>
             <p className='text-[#8D8D8D]'>Qty 1</p>
             <p className='text-[#8D8D8D]'>Size L</p>
             <p className='text-[#8D8D8D]'>₹3,895.00</p>
           </div>
         </div>
         <div className="flex mt-4">
-          <Image src="/checkout2.png" width={80} height={80} alt="Nike Air Max 97 SE Men's Shoes" className="mr-4"/>
+          <Image src="/checkout2.png" width={80} height={80} alt="Nike Air Max 97 SE Men&apos;s Shoes" className="mr-4"/>
           <div>
-            <p>Nike Air Max 97 SE Men Shoes</p>
+            <p>Nike Air Max 97 SE Men&apos;s Shoes</p>
             <p className='text-[#8D8D8D]'>Qty 1</p>
             <p className='text-[#8D8D8D]'>Size UK 8</p>
             <p className='text-[#8D8D8D]'>₹16,995.00</p>
