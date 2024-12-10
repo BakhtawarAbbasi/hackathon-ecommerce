@@ -14,7 +14,9 @@ const Navbar = () => {
         <div className="w-full h-[48px] bg-[#FFFFFF] flex justify-between items-center px-4 lg:px-8">
             {/* Left Side (Logo) */}
             <div className="flex items-center">
+                <Link href="/">
                 <Image src="/vector.png" alt="Nike Logo" width={30} height={30} />
+                </Link>
             </div>
 
             {/* Center Links for Desktop */}
@@ -22,7 +24,7 @@ const Navbar = () => {
                 <Link href="/" className="hover:text-gray-500">
                     New & Featured
                 </Link>
-                <Link href="/men" className="hover:text-gray-500">
+                <Link href="/" className="hover:text-gray-500">
                     Men
                 </Link>
                 <Link href="/" className="hover:text-gray-500">
@@ -34,7 +36,7 @@ const Navbar = () => {
                 <Link href="/" className="hover:text-gray-500">
                     Sale
                 </Link>
-                <Link href="/SNKRS" className="hover:text-gray-500">
+                <Link href="/" className="hover:text-gray-500">
                     SNKRS
                 </Link>
             </div>
