@@ -25,8 +25,8 @@ const Footer: React.FC = () => {
               <li><a href="#" className="hover:underline leading-6">Delivery</a></li>
               <li><a href="#" className="hover:underline leading-6">Returns</a></li>
               <li><a href="#" className="hover:underline leading-6">Payment Options</a></li>
-              <li><a href="#" className="hover:underline leading-6">Contact Us On Nike.com Inquiries</a></li>
-              <li><a href="#" className="hover:underline leading-6">Contact Us On All Other Inquiries</a></li>
+              <li><a href="/Contact" className="hover:underline leading-6">Contact Us On Nike.com Inquiries</a></li>
+              <li><a href="/Contact" className="hover:underline leading-6">Contact Us On All Other Inquiries</a></li>
             </ul>
           </div>
           <div>

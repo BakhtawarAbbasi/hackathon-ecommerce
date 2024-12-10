@@ -12,7 +12,7 @@ const TopNavbar = () => {
 
             {/* Right Side (Links) */}
             <div className="flex items-center space-x-4 text-sm text-[#111111]">
-                <Link href="/" className="hover:underline">
+                <Link href="/Product" className="hover:underline">
                     Find a Store
                 </Link>
                 <span>|</span>
@@ -20,11 +20,11 @@ const TopNavbar = () => {
                     Help
                 </Link>
                 <span>|</span>
-                <Link href="/" className="hover:underline">
+                <Link href="/JoinUs" className="hover:underline">
                     Join Us
                 </Link>
                 <span>|</span>
-                <Link href="/" className="hover:underline">
+                <Link href="/Login" className="hover:underline">
                     Sign In
                 </Link>
             </div>
