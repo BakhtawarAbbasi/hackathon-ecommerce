@@ -16,7 +16,7 @@ const TopNavbar = () => {
                     Find a Store
                 </Link>
                 <span>|</span>
-                <Link href="/" className="hover:underline">
+                <Link href="/Contact" className="hover:underline">
                     Help
                 </Link>
                 <span>|</span>
