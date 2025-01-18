@@ -85,8 +85,8 @@ const GearUp: React.FC = () => {
     };
 
     return (
-        <div className="relative w-full p-4 h-full">
-            <h1 className="text-2xl font-bold text-center mb-8">Gear Up</h1>
+        <div className="relative w-full h-full my-12">
+            <h1 className="text-2xl font-bold mb-2">Gear Up</h1>
 
             <div className="flex justify-between space-x-4">
                 {/* Men Section */}
@@ -115,7 +115,7 @@ const GearUp: React.FC = () => {
                                     <Image
                                         src={product.src}
                                         alt={product.alt}
-                                        layout="fill"
+                                    fill
                                         objectFit="cover"
                                         className="rounded-lg"
                                     />

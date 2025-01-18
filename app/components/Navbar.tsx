@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,7 +15,7 @@ const Navbar = () => {
             {/* Left Side (Logo) */}
             <div className="flex items-center">
                 <Link href="/">
-                <Image src="/vector.png" alt="Nike Logo" width={30} height={30} />
+                    <Image src="/vector.png" alt="Nike Logo" width={30} height={30} />
                 </Link>
             </div>
 

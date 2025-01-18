@@ -61,8 +61,8 @@ const ProductSlider: React.FC = () => {
 
     return (
         <div className="relative w-full p-4 h-[604px]">
-            <div className="flex justify-between items-center mb-4">
-                <h2 className="text-[22px] text-[#111111] lg:mx-2">Best of Air Max</h2>
+            <div className="flex justify-between  mb-4">
+                <h2 className="text-[22px] text-[#111111]">Best of Air Max</h2>
                 <div className="flex space-x-2 lg:my-2">
                     <p className="text-center pt-2">shop</p>
                     <button
@@ -94,13 +94,13 @@ const ProductSlider: React.FC = () => {
                                 className="rounded-lg"
                             />
                         </div>
-                        <div className="flex justify-start gap-36">
-                        <h3 className="text-sm text-[#111111] font-bold mt-2">
-                            {product.name}
-                        </h3>
-                        <p className="text-sm text-[#111111] font-semibold mt-2">
-                            {product.price}
-                        </p>
+                        <div className="flex justify-between">
+                            <h3 className="text-sm text-[#111111] font-bold mt-2">
+                                {product.name}
+                            </h3>
+                            <p className="text-sm text-[#111111] font-semibold mt-2">
+                                {product.price}
+                            </p>
                         </div>
                         <p className="text-sm text-[#757575]">{product.category}</p>
                     </div>

@@ -25,8 +25,8 @@ const LoginPage: React.FC = () => {
           </div>
           <div className="mb-4">
             <p className="text-[#8D8D8D] text-sm text-center">
-              By logging in, you agree to Nike Privacy Policy and Terms of Use  
-              </p>
+              By logging in, you agree to Nike Privacy Policy and Terms of Use
+            </p>
           </div>
           <button type="submit" className="w-full bg-black text-white py-2 rounded hover:bg-gray-800">SIGN IN</button>
         </form>

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
+import Link from "next/link";
 const ContactPage: React.FC = () => {
   return (
     <div className="w-full h-auto p-4 md:p-8 mb-12">
@@ -10,12 +10,13 @@ const ContactPage: React.FC = () => {
         <input
           type="text"
           placeholder="What can we help you with?"
-          className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-black"
         />
       </header>
 
       {/* Main Content */}
       <div className="flex flex-col lg:flex-row gap-8 items-start">
+
         {/* Left Section (Text Content) */}
         <section className="flex-1 p-4">
           {/* Title */}
@@ -35,18 +36,22 @@ const ContactPage: React.FC = () => {
           <p className="mb-4">
             Nike Members can store multiple debit or credit cards in their
             profile for faster checkout. If you are not already a member,{" "}
-            <a href="#" className="text-blue-500 underline">
+            <a href="/JoinUs" className="text-blue-500 underline">
               join us today.
             </a>
           </p>
           {/* Buttons */}
           <div className="flex flex-wrap gap-4 mb-8">
-            <button className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800">
-              JOIN US
-            </button>
-            <button className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800">
-              SHOP NIKE
-            </button>
+            <Link href="/JoinUs">
+              <button className="bg-black text-white transition-all duration-300 ease-in-out hover:text-black hover:bg-[#E5E5E5] hover:shadow-lg hover:-translate-y-1 px-4 py-2 rounded-full">
+                JOIN US
+              </button>
+            </Link>
+            <Link href="/Product">
+              <button className="bg-black text-white transition-all duration-300 ease-in-out hover:text-black hover:bg-[#E5E5E5] hover:shadow-lg hover:-translate-y-1 px-4 py-2 rounded-full">
+                SHOP NIKE
+              </button>
+            </Link>
           </div>
 
           {/* FAQs */}

@@ -10,10 +10,10 @@ const Main = () => {
 
             {/* Right Side */}
             <div className='flex items-center space-x-4 mt-2 md:mt-0'>
-                
+
                 {/* Hide Filter with Icon */}
                 <div className='flex items-center'>
-                    <Image src="/filtericon.png" alt="" height={16} width={16} className='mr-2'/>
+                    <Image src="/filtericon.png" alt="" height={16} width={16} className='mr-2' />
                     <span className='text-sm md:text-base'>Hide Filter</span>
                 </div>
 

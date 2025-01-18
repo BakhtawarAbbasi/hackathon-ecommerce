@@ -5,7 +5,7 @@ const Cart: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#FFFFFF] flex items-center justify-center py-8 px-4">
       <main className="container mx-auto max-w-6xl bg-[#FFFFFF] p-4 md:p-6 ">
-        
+
         {/* Free Delivery Banner */}
         <div className="bg-[#F7F7F7] flex flex-col md:flex-row md:items-center lg:pl-8 p-3 md:p-4 mb-6 text-center">
           <p className="text-sm text-gray-700">Free Delivery</p>
@@ -51,12 +51,14 @@ const Cart: React.FC = () => {
                     alt="Favorites"
                     width={16}
                     height={16}
+                    className="cursor-pointer"
                   />
                   <Image
                     src="/delete-icon.png"
                     alt="Delete"
                     width={16}
                     height={16}
+                    className="cursor-pointer"
                   />
                 </div>
               </div>
@@ -108,7 +110,7 @@ const Cart: React.FC = () => {
               </p>
             </div>
 
-            
+
           </section>
 
           {/* Summary Section */}
@@ -127,14 +129,14 @@ const Cart: React.FC = () => {
               <span>₹20,890.00</span>
             </div>
             <Link href="/CheckOut">
-            <button className="w-full bg-black text-white text-sm py-2 rounded-full mt-4">
-              Member Checkout
-            </button>
+              <button className="w-full bg-black text-white text-sm py-2 rounded-full mt-4">
+                Member Checkout
+              </button>
             </Link>
           </aside>
         </div>
 
-        
+
       </main>
     </div>
   );

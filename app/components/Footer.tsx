@@ -40,8 +40,8 @@ const Footer: React.FC = () => {
               <li><a href="#" className="hover:underline leading-6">Sustainability</a></li>
             </ul>
           </div>
-           
-           {/* social link */}
+
+          {/* social link */}
           <div className="flex flex-col justify-between items-start lg:items-end">
             <div className="flex space-x-4">
               <a href="#" className="hover:underline"><Image src="/twitter.png" alt="Twitter" height={24} width={24} /></a>

@@ -16,7 +16,7 @@
 # next.js
 /.next/
 /out/
-
+grid-rows-*grid grid-rows-4 grid-flow-col gap-4
 # production
 /build
 
