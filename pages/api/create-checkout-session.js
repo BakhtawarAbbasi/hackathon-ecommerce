@@ -1,8 +1,8 @@
 import Stripe from "stripe";
-import { client } from "@/sanity/lib/client"; // Import Sanity client
+import { client } from "@/sanity/lib/client"; 
 
-// Initialize Stripe with your secret key
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+// Initialize Stripe with  secret key
+const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY, {
   apiVersion: "2023-08-16",
 });
 
@@ -11,7 +11,6 @@ export default async function handler(req, res) {
     try {
       const { cartItems, total, formValues } = req.body;
 
-      // Create line items for Stripe Checkout
       const lineItems = cartItems.map((item) => ({
         price_data: {
           currency: "usd",
