@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import { addToCart } from "@/app/action/action";
@@ -11,16 +10,15 @@ import Swal from "sweetalert2";
 import { Product } from "@/types/products";
 
 export default function ProductPage() {
-  const params = useParams();
-  const { slug } = params; // slug ka type ab string | string[]
-  // Agar slug ek array hai to pehla element lein
+  // Assert that the params object has a slug property.
+  const { slug } = useParams() as { slug: string | string[] };
+
+  // If slug is an array, use its first element; otherwise use slug as a string.
   const slugStr: string = typeof slug === "string" ? slug : slug ? slug[0] : "";
 
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // Sanity se product fetch karne ka function.
-  // Yahan maine query mein inventory aur slug fields bhi add kar di hain.
   const getProduct = async (slug: string) => {
     try {
       const data = await client.fetch(
@@ -64,8 +62,18 @@ export default function ProductPage() {
     addToCart(product);
   };
 
-  if (loading) return <div className="flex justify-center items-center min-h-screen">Loading...</div>;
-  if (!product) return <div className="flex justify-center items-center min-h-screen">Product not found</div>;
+  if (loading)
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        Loading...
+      </div>
+    );
+  if (!product)
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        Product not found
+      </div>
+    );
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
