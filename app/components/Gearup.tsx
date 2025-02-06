@@ -85,7 +85,7 @@ const GearUp: React.FC = () => {
     };
 
     return (
-        <div className="relative w-full h-full my-12">
+        <div className="relative h-full my-12 ">
             <h1 className="text-2xl font-bold mb-2">Gear Up</h1>
 
             <div className="flex justify-between space-x-4">
@@ -115,8 +115,8 @@ const GearUp: React.FC = () => {
                                     <Image
                                         src={product.src}
                                         alt={product.alt}
-                                    fill
-                                        objectFit="cover"
+                                        fill
+                                        // objectFit="cover"
                                         className="rounded-lg"
                                     />
                                 </div>
@@ -156,8 +156,9 @@ const GearUp: React.FC = () => {
                                     <Image
                                         src={product.src}
                                         alt={product.alt}
-                                        layout="fill"
-                                        objectFit="cover"
+                                        // layout="fill"
+                                        fill
+                                        // objectFit="cover"
                                         className="rounded-lg"
                                     />
                                 </div>

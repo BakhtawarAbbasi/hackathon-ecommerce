@@ -1,55 +1,35 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
-
-interface Product {
-    src: string;
-    alt: string;
-    name: string;
-    category: string;
-    price: string;
-}
-
-const products: Product[] = [
-    {
-        src: "/slide1.png",
-        alt: "Jordan Why Not .6 PF",
-        name: "Jordan Why Not .6 PF",
-        category: "Women's Shoes",
-        price: "₹13,995.00",
-    },
-    {
-        src: "/slide2.png",
-        alt: "Zion 2 PF",
-        name: "Zion 2 PF",
-        category: "Men's Basketball Shoes",
-        price: "₹10,795.00",
-    },
-    {
-        src: "/slide3.png",
-        alt: "Air Jordan 1 Mid SE",
-        name: "Air Jordan 1 Mid SE",
-        category: "Men's Shoes",
-        price: "₹12,295.00",
-    },
-    {
-        src: "/item2.png",
-        alt: "Air Jordan 4",
-        name: "Air Jordan 4",
-        category: "Women's Shoes",
-        price: "₹14,295.00",
-    },
-    {
-        src: "/item3.png",
-        alt: "Air Jordan 11",
-        name: "Air Jordan 11",
-        category: "Men's Shoes",
-        price: "₹15,995.00",
-    },
-];
+import { useRouter } from "next/navigation"; 
+import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
+import { Product } from "@/types/products";
+import Link from "next/link";
 
 const ProductSlider: React.FC = () => {
+    const [products, setProducts] = useState<Product[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const router = useRouter();
+
+    useEffect(() => {
+        const fetchProducts = async () => {
+            const query = `*[_type == "product"]{
+                _id,
+                productName,
+                slug,
+                price,
+                "image": image.asset->url,
+                color,
+                description,
+                purchases
+            }`;
+            const data = await client.fetch(query);
+            setProducts(data);
+        };
+
+        fetchProducts();
+    }, []);
 
     const nextSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % products.length);
@@ -59,50 +39,62 @@ const ProductSlider: React.FC = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + products.length) % products.length);
     };
 
+    const getCurrentProducts = () => {
+        if (products.length === 0) return [];
+        const repeatedProducts = [...products, ...products]; 
+        return repeatedProducts.slice(currentIndex, currentIndex + 3);
+    };
+
     return (
         <div className="relative w-full p-4 h-[604px]">
             <div className="flex justify-between  mb-4">
-                <h2 className="text-[22px] text-[#111111]">Best of Air Max</h2>
+                <h2 className="text-[22px] text-[#111111] font-bold">Best of Air Max</h2>
                 <div className="flex space-x-2 lg:my-2">
                     <p className="text-center pt-2">shop</p>
                     <button
                         onClick={prevSlide}
-                        className="bg-[#E5E5E5] w-10 h-10 text-center p-2 rounded-full shadow-md"
+                        className="bg-[#E5E5E5] w-10 h-10 text-center p-2 rounded-full shadow-md 
+                        hover:bg-gray-300 transition-all duration-200 ease-in-out"
                     >
                         &lt;
                     </button>
                     <button
                         onClick={nextSlide}
-                        className="bg-[#E5E5E5] w-10 h-10 text-center p-2 rounded-full shadow-md"
+                        className="bg-[#E5E5E5] w-10 h-10 text-center p-2 rounded-full shadow-md 
+                        hover:bg-gray-300 transition-all duration-200 ease-in-out"
                     >
                         &gt;
                     </button>
                 </div>
             </div>
             <div className="flex justify-center items-center w-full overflow-hidden">
-                {products.slice(currentIndex, currentIndex + 3).map((product, index) => (
+                {getCurrentProducts().map((product) => (
                     <div
-                        key={index}
-                        className="flex-shrink-0 w-full sm:w-1/3 max-w-[400px] px-2 transition-transform duration-300"
+                        key={product._id}
+                        className="flex-shrink-0 w-full sm:w-1/3 max-w-[400px] px-2 transition-all 
+                        duration-300 cursor-pointer hover:scale-[1.02] hover:shadow-lg rounded-lg"
                     >
-                        <div className="relative h-[400px]">
-                            <Image
-                                src={product.src}
-                                alt={product.alt}
-                                layout="fill"
-                                objectFit="cover"
-                                className="rounded-lg"
-                            />
-                        </div>
-                        <div className="flex justify-between">
-                            <h3 className="text-sm text-[#111111] font-bold mt-2">
-                                {product.name}
-                            </h3>
-                            <p className="text-sm text-[#111111] font-semibold mt-2">
-                                {product.price}
-                            </p>
-                        </div>
-                        <p className="text-sm text-[#757575]">{product.category}</p>
+                        <Link href={`/ProductDetails/${product.slug.current}`}>
+                            <div className="relative h-[400px] overflow-hidden rounded-lg">
+                                {product.image && (
+                                    <Image
+                                        src={urlFor(product.image).url()}
+                                        alt={product.productName}
+                                        layout="fill"
+                                        objectFit="cover"
+                                        className="rounded-lg transition-all duration-300 hover:scale-[1.03]"
+                                    />
+                                )}
+                            </div>
+                            <div className="flex justify-between p-2 mt-2">
+                                <h3 className="text-sm text-[#111111] font-bold mt-2">
+                                    {product.productName}
+                                </h3>
+                                <p className="text-sm text-red-600 font-semibold mt-2">
+                                    ${product.price.toLocaleString()}
+                                </p>
+                            </div>
+                        </Link>
                     </div>
                 ))}
             </div>
@@ -111,3 +103,118 @@ const ProductSlider: React.FC = () => {
 };
 
 export default ProductSlider;
+
+
+
+
+
+// "use client";
+// import React, { useEffect, useState } from "react";
+// import Image from "next/image";
+// import { useRouter } from "next/navigation"; // Import useRouter
+// import { client } from "@/sanity/lib/client";
+// import { urlFor } from "@/sanity/lib/image";
+// import { Product } from "@/types/products";
+// import Link from "next/link";
+
+// const ProductSlider: React.FC = () => {
+//     const [products, setProducts] = useState<Product[]>([]);
+//     const [currentIndex, setCurrentIndex] = useState(0);
+//     const router = useRouter(); // Initialize router
+
+//     useEffect(() => {
+//         // Fetch products from Sanity
+//         const fetchProducts = async () => {
+//             const query = `*[_type == "product"]{
+//                 _id,
+//                 productName,
+//                 slug,
+//                 price,
+//                 "image": image.asset->url,
+//                 color,
+//                 description,
+//                 purchases
+//             }`;
+//             const data = await client.fetch(query);
+//             setProducts(data);
+//         };
+
+//         fetchProducts();
+//     }, []);
+
+//     const nextSlide = () => {
+//         setCurrentIndex((prevIndex) => (prevIndex + 1) % products.length);
+//     };
+
+//     const prevSlide = () => {
+//         setCurrentIndex((prevIndex) => (prevIndex - 1 + products.length) % products.length);
+//     };
+
+//     // Get current set of 3 products, repeat if necessary
+//     const getCurrentProducts = () => {
+//         if (products.length === 0) return [];
+//         const repeatedProducts = [...products, ...products]; // Repeat array
+//         return repeatedProducts.slice(currentIndex, currentIndex + 3);
+//     };
+
+//     const handleProductClick = (productId: string) => {
+//         router.push(`/product/${productId}`); // Navigate to the product detail page
+//     };
+
+//     return (
+//         <div className="relative w-full p-4 h-[604px]">
+//             <div className="flex justify-between  mb-4">
+//                 <h2 className="text-[22px] text-[#111111] font-bold">Best of Air Max</h2>
+//                 <div className="flex space-x-2 lg:my-2">
+//                     <p className="text-center pt-2">shop</p>
+//                     <button
+//                         onClick={prevSlide}
+//                         className="bg-[#E5E5E5] w-10 h-10 text-center p-2 rounded-full shadow-md"
+//                     >
+//                         &lt;
+//                     </button>
+//                     <button
+//                         onClick={nextSlide}
+//                         className="bg-[#E5E5E5] w-10 h-10 text-center p-2 rounded-full shadow-md"
+//                     >
+//                         &gt;
+//                     </button>
+//                 </div>
+//             </div>
+//             <div className="flex justify-center items-center w-full overflow-hidden">
+//                 {getCurrentProducts().map((product, index) => (
+//                     <div
+//                     key={product._id} // Ensure unique key for repeated products
+//                         className="flex-shrink-0 w-full sm:w-1/3 max-w-[400px] px-2 transition-transform duration-300 cursor-pointer"
+//                         // Add click handler
+//                     >
+//                         <Link href={`/ProductDetails/${product.slug.current}`}>
+//                         <div className="relative h-[400px]">
+//                             {product.image && (
+//                                 <Image
+//                                     src={urlFor(product.image).url()}
+//                                     alt={product.productName}
+//                                     layout="fill"
+//                                     objectFit="cover"
+//                                     className=" rounded-lg "
+//                                 />
+//                             )}
+
+//                         </div>
+//                         <div className="flex justify-between">
+//                             <h3 className="text-sm text-gray-700 font-bold mt-2">
+//                                 {product.productName}
+//                             </h3>
+//                             <p className="text-sm text-red-600 font-semibold mt-2">
+//                                 ${product.price.toLocaleString()}
+//                             </p>
+//                         </div>
+//                             </Link>
+//                     </div>
+//                 ))}
+//             </div>
+//         </div>
+//     );
+// };
+
+// export default ProductSlider;

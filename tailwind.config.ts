@@ -6,11 +6,12 @@ export default {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages**/success/*.{tsx}'
   ],
   theme: {
   	extend: {
   		colors: {	
-  			
+  			pink: "#3A7D44"
   		},
       
       screens: {

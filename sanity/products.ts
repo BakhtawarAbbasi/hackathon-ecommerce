@@ -7,6 +7,15 @@ export const productSchema = {
         name: 'productName',
         title: 'Product Name',
         type: 'string',
+       
+      },
+      {
+        name: "slug",
+        type: "slug",
+        title: "Slug",
+        options : {
+          source : "productName"
+        }
       },
       {
         name: 'category',

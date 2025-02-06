@@ -5,8 +5,6 @@ import TopNavbar from "../components/TopNavbar";
 export default function LoginPage() {
     return(
       <>
-      <TopNavbar/>
-      <Navbar/>
         <Login/>
       </>
       

@@ -5,8 +5,7 @@ import TopNavbar from "../components/TopNavbar";
 export default function JoinusPage() {
     return(
       <>
-      <TopNavbar/>
-      <Navbar/>
+   
         <JoinUs/>
       </>
       

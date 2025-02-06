@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Image from 'next/image';
 import ProductSlider from './ProductSlider';
@@ -18,7 +19,7 @@ const HomePage = () => {
         <Image
           src="/back1.png"
           alt="Nike Air Max Pulse"
-          layout="responsive"
+       
           width={1344}
           height={700}
           className="object-cover"
@@ -36,7 +37,7 @@ const HomePage = () => {
             </button>
 
 
-            <Link href="/Product">
+            <Link href="/Products">
               <button className="bg-[#111111] text-white  transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1 hover:text-black hover:bg-[#E5E5E5] px-4 py-2 rounded-full">Shop Air Max</button>
             </Link>
           </div>
@@ -55,7 +56,6 @@ const HomePage = () => {
         <Image
           src="/back2.png"
           alt="Step into what feels good"
-          layout="responsive"
           width={1344}
           height={700}
           className="object-cover"
@@ -81,7 +81,7 @@ const HomePage = () => {
         <Image
           src="/back3.png"
           alt="Fight Essentials"
-          layout="responsive"
+        
           width={1344}
           height={700}
           className="object-cover"
@@ -91,7 +91,7 @@ const HomePage = () => {
           <p className="text-sm md:text-base mt-4 mx-auto max-w-lg">
             Cause everyone should know the feeling of running in that perfect pair.
           </p>
-          <Link href="/Product">
+          <Link href="/Products">
             <button className="bg-[#111111] text-white  transition-all duration-300 ease-in-out hover:text-black hover:bg-[#E5E5E5] hover:shadow-lg hover:-translate-y-1 px-4 py-2 rounded-full mt-4">Shop</button>
           </Link>
         </div>
