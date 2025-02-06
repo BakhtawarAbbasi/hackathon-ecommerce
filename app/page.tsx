@@ -3,8 +3,6 @@ import HomePage from './components/HomePage';
 import "./globals.css";
 const Home: React.FC = () => {
   return (
- 
-
       <HomePage/>
   );
 };
