@@ -33,7 +33,8 @@ export default function CheckoutPage() {
     email: false,
   });
 
-  const { clearCart } = useCart();
+  // Removed clearCart as it was not being used
+  // const { clearCart } = useCart();
 
   useEffect(() => {
     setCartItems(getCartItems());
@@ -76,7 +77,7 @@ export default function CheckoutPage() {
       return;
     }
     
-
+    
     try {
       // Create a Stripe Checkout Session
       const response = await fetch("/api/create-checkout-session", {
@@ -218,7 +219,7 @@ export default function CheckoutPage() {
                 </div>
               </div>
 
-              <h3 className="font-semibold text-gray-700">What's Your Contact Information?</h3>
+              <h3 className="font-semibold text-gray-700">What&apos;s Your Contact Information?</h3>
               <div>
                 <input
                   id="email"
@@ -261,13 +262,16 @@ export default function CheckoutPage() {
             <h2 className="text-lg font-bold mb-4 text-gray-800">Order Summary</h2>
             <div className="pt-4">
               <p className="text-sm font-bold mb-2 py-2 flex justify-between">
-                <span className="text-lg">Subtotal:</span> <span className="font-bold text-gray-600">${subtotal}</span>
+                <span className="text-lg">Subtotal:</span>{" "}
+                <span className="font-bold text-gray-600">${subtotal}</span>
               </p>
               <p className="text-sm font-bold mb-2 py-2 flex justify-between">
-                <span className="text-lg">Discount:</span> <span className="font-bold text-gray-600">-${discount}</span>
+                <span className="text-lg">Discount:</span>{" "}
+                <span className="font-bold text-gray-600">-${discount}</span>
               </p>
               <p className="text-lg font-bold mb-2 border-y py-4 border-t-slate-300 flex justify-between">
-                <span className="text-lg">Total:</span> <span className="text-gray-600">${total.toFixed(2)}</span>
+                <span className="text-lg">Total:</span>{" "}
+                <span className="text-gray-600">${total.toFixed(2)}</span>
               </p>
             </div>
 

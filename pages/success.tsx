@@ -1,39 +1,12 @@
-// import { useEffect } from "react";
-// import { useRouter } from "next/router";
-// import Swal from "sweetalert2";
-// import { CartProvider } from "@/app/context/CartContext";
-
-// export default function SuccessPage() {
-//   const router = useRouter();
-// // 
-//   useEffect(() => {
-//     const sessionId = router.query.session_id;
-//     if (sessionId) {
-//       Swal.fire("Success!", "Your payment was successful!", "success");
-//       // Optionally, you can clear the cart or perform other actions here
-//     }
-//   }, [router.query.session_id]);
-
-//   return (
-//     <CartProvider>
-//     <div className="min-h-screen flex items-center justify-center bg-gray-50">
-//       <h1 className="text-2xl font-bold text-red-800">Payment Successful!</h1>
-//     </div>
-//     </CartProvider>
-//   );
-// }
-
-
-
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Swal from "sweetalert2";
 
 export default function SuccessPage() {
   const router = useRouter();
+  const sessionId = router.query.session_id;
 
   useEffect(() => {
-    const sessionId = router.query.session_id;
     if (sessionId) {
       Swal.fire({
         title: "Success!",
@@ -41,7 +14,8 @@ export default function SuccessPage() {
         icon: "success",
         confirmButtonText: "Continue Shopping",
         customClass: {
-          confirmButton: "bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded",
+          confirmButton:
+            "bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded",
         },
       }).then((result) => {
         if (result.isConfirmed) {
@@ -51,7 +25,7 @@ export default function SuccessPage() {
       // Directly remove the cart data from localStorage
       localStorage.removeItem("cart");
     }
-  }, [router.query.session_id]);
+  }, [sessionId, router]);
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-green-400 to-blue-500 p-4">
@@ -72,10 +46,3 @@ export default function SuccessPage() {
     </div>
   );
 }
-
-
-
-
-
-
-
