@@ -32,9 +32,6 @@ export default function CheckoutPage() {
     email: false,
   });
 
-  // Removed clearCart as it was not being used
-  // const { clearCart } = useCart();
-
   useEffect(() => {
     setCartItems(getCartItems());
     const appliedDiscount = localStorage.getItem("appliedDiscount");

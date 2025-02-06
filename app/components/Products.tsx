@@ -45,7 +45,7 @@ const Products = () => {
             key={product._id}
             className="bg-white shadow-md p-4 rounded-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group transform hover:-translate-y-2"
           >
-            <Link href={`/ProductDetails/${product.slug.current}`}>
+            <Link href={`/productdetails/${product.slug.current}`}>
               <div className="relative overflow-hidden rounded-md">
                 {product.image && (
                   <Image
