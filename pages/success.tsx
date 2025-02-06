@@ -19,10 +19,9 @@ export default function SuccessPage() {
         },
       }).then((result) => {
         if (result.isConfirmed) {
-          router.push("/"); // Redirect to the home page or any other page
+          router.push("/"); // Redirect to the home page 
         }
       });
-      // Directly remove the cart data from localStorage
       localStorage.removeItem("cart");
     }
   }, [sessionId, router]);
