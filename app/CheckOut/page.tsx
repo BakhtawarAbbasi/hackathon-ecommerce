@@ -7,7 +7,6 @@ import { urlFor } from "@/sanity/lib/image";
 import { CgChevronRight } from "react-icons/cg";
 import { getCartItems } from "../action/action";
 import Swal from "sweetalert2";
-import { useCart } from "../context/CartContext";
 import { loadStripe } from "@stripe/stripe-js";
 
 export default function CheckoutPage() {
@@ -77,7 +76,7 @@ export default function CheckoutPage() {
       return;
     }
     
-    
+
     try {
       // Create a Stripe Checkout Session
       const response = await fetch("/api/create-checkout-session", {
